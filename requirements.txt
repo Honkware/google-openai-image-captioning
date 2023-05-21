@@ -1,0 +1,4 @@
+torch
+openai
+google-cloud-vision
+transformers

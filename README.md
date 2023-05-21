@@ -10,6 +10,12 @@ A minimal and efficient image captioning tool using Google Cloud Vision API for 
 pip install -r requirements.txt
 ```
 
+Optionally, you can also install Gradio for a graphical user interface:
+
+```
+pip install gradio
+```
+
 2. **Set up Google Cloud Vision API credentials:**
 
 - Create a Google Cloud project and enable the Vision API by following the instructions [here](https://cloud.google.com/vision/docs/before-you-begin).
@@ -38,4 +44,20 @@ The script will process each image in the folder and print a concise description
 Image: primate.jpeg
 Description: A primate observes a plant in its natural environment, surrounded by other organisms and terrestrial plants
 ---------------------
+```
+
+## Optional: Gradio Interface
+
+If you have installed Gradio, you can use the `gradio_gen.py` script to launch a web interface for the image captioning tool. Run the script with the following command:
+
+```
+python gradio_gen.py <google_credentials> <openai_api_key>
+```
+
+Replace `<google_credentials>` with the path to your Google Cloud JSON key file, and `<openai_api_key>` with your OpenAI API key.
+
+To create a shareable link, add the `--share` option:
+
+```
+python gradio_gen.py <google_credentials> <openai_api_key> --share
 ```

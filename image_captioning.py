@@ -24,7 +24,7 @@ def describe_image(image_path, google_credentials, openai_api_key):
     # Generate image description using GPT-3.5-turbo
     messages = [
         {"role": "system", "content": "You are a helpful assistant that can describe images concisely and accurately."},
-        {"role": "user", "content": f"Caption image: {labels_sentence}"}
+        {"role": "user", "content": f"Caption image based on this information: {labels_sentence}"}
     ]
 
     response = openai.ChatCompletion.create(

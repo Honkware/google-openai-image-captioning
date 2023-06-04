@@ -12,8 +12,8 @@ def caption_image(image, google_credentials, openai_api_key):
 def main(google_credentials, openai_api_key, share):
     iface = gr.Interface(
         fn=lambda image: caption_image(image, google_credentials, openai_api_key),
-        inputs=gr.inputs.Image(label="Upload Image"),
-        outputs=gr.outputs.Textbox(label="Image Description"),
+        inputs=gr.components.Image(label="Upload Image"),
+        outputs=gr.components.Textbox(label="Image Description"), 
         title="Google-OpenAI Image Captioning",
         description="An image captioning tool using Google Cloud Vision API for label detection and OpenAI CLIP for image understanding.",
     )
